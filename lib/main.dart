@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wisata_mobile/materimodulscreens/pertemuan6.dart';
 import 'package:wisata_mobile/screens/splashscreen.dart';
 
 void main(){
@@ -12,7 +13,7 @@ class TravelApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:SplashScreen(),
+      home:Pertemuan6(),
     );
   }
 }

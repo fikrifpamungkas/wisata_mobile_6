@@ -29,7 +29,7 @@ class _MystatefulwidgetState extends State<Mystatefulwidget> {
 
           ElevatedButton(
             onPressed: () {
-              _tambahAngka(1000000000000000);
+              _tambahAngka();
             },
             child: Text('tambah angka'),
           )
