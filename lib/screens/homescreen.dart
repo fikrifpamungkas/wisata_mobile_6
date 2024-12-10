@@ -32,68 +32,70 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kBackgroundColor,
-      body: Column(
-        children: [
-          buildAppBar(),
-          SizedBox(height: 20),
-          Padding(padding: EdgeInsets.symmetric(horizontal: 15),
-          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: 
-           Text('Tempat Populer',
-           style: TextStyle(fontSize: 16,
-           fontWeight: FontWeight.w600
-           ),
-           )
-
-           [],),)
-           SizedBox(height: 20),
-           SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            padding: EdgeInsets.only(right: 15),
-            child: Row(
-              children: List.generate(
-                populer.length,
-                (index) => Padding(
-                  padding: EdgeInsets.only(right: 15),
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: PopularDestination(
-                      destination: populer[index],
-                    ),
+      body: Column(children: [
+        buildAppBar(),
+        SizedBox(height: 20),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Tempat Populer',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              )
+            ],
+          ),
+        ),
+        SizedBox(height: 20),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          padding: EdgeInsets.only(right: 15),
+          child: Row(
+            children: List.generate(
+              populer.length,
+              (index) => Padding(
+                padding: EdgeInsets.only(right: 15),
+                child: GestureDetector(
+                  onTap: () {},
+                  child: PopularDestination(
+                    destination: populer[index],
                   ),
                 ),
               ),
             ),
-           )
-                SizedBox(height: 20),
-          Padding(padding: EdgeInsets.symmetric(horizontal: 15),
-          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: 
-           Text('Rekomendasi untuk kamu',
-           style: TextStyle(fontSize: 16,
-           fontWeight: FontWeight.w600
-           ),
-           )
-
-           [],),)
-           SizedBox(height: 20),
-           SingleChildScrollView(
+          ),
+        ),
+        SizedBox(height: 20),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Rekomendasi untuk kamu',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              )
+            ],
+          ),
+        ),
+        SizedBox(height: 20),
+        SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: EdgeInsets.only(right: 15),
             child: Row(
-              children: List.generate(
-                populer.length,
-                (index) => Padding(
-                  padding: EdgeInsets.only(right: 15),
-                  child: GestureDetector(
-                    onTap: () {},
-                    child: PopularDestination(
-                      destination: populer[index],
-                    ),
-                  ),)))
-                ),
-        ];
-      ),
+                children: List.generate(
+                    populer.length,
+                    (index) => Padding(
+                          padding: EdgeInsets.only(right: 15),
+                          child: GestureDetector(
+                            onTap: () {},
+                            child: PopularDestination(
+                              destination: populer[index],
+                            ),
+                          ),
+                        )))),
+      ]),
     );
   }
 }
@@ -120,9 +122,7 @@ Widget buildAppBar() {
             child: Padding(
       padding: EdgeInsets.only(top: 20, left: 15, right: 15),
       child: buildSearchButton(),
-    )
-    )
-    ),
+    ))),
   );
 }
 
